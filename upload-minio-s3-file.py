@@ -12,6 +12,11 @@ s3 = boto3.resource('s3',
 
 
 
+
+##create bucket
+response = s3.create_bucket(Bucket='mytestbucket',
+           CreateBucketConfiguration={'LocationConstraint':'uk-lon1'})
+
 ## upload a file from local file system 
 s3.Bucket('test').upload_file('/root/miniotest/miniotest.txt','miniotest.txt')
 
