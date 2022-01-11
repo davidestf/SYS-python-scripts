@@ -8,7 +8,7 @@ s3 = boto3.resource('s3',
                     aws_access_key_id='minio',
                     aws_secret_access_key='minio123',
                     config=Config(signature_version='s3v4'),
-                    region_name='us-east-1')
+                    region_name='uk-lon1')
 
 
 
