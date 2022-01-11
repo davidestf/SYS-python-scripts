@@ -18,10 +18,10 @@ response = s3.create_bucket(Bucket='mytestbucket',
            CreateBucketConfiguration={'LocationConstraint':'uk-lon1'})
 
 ## upload a file from local file system 
-s3.Bucket('test').upload_file('/root/miniotest/miniotest.txt','miniotest.txt')
+s3.Bucket('mytestbucket').upload_file('/root/miniotest/miniotest.txt','miniotest.txt')
 
 # download the object  and save it to local FS 
-s3.Bucket('test').download_file('miniotest.txt', '/tmp/miniotestdownload.txt')
+s3.Bucket('mytestbucket').download_file('miniotest.txt', '/tmp/miniotestdownload.txt')
 
 print ("successfull")
 
