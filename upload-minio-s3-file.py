@@ -4,7 +4,7 @@ from botocore.client import Config
 
 
 s3 = boto3.resource('s3',
-                    endpoint_url='http://minio.staffieri.co.uk:9000',
+                    endpoint_url='http://minio.$DOMAIN:9000',
                     aws_access_key_id='minio',
                     aws_secret_access_key='minio123',
                     config=Config(signature_version='s3v4'),
